@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite-plugin-windicss';
+import { screenEnum } from './src/enums/breakpointEnum';
 
 export default defineConfig({
   darkMode: 'class',
@@ -16,12 +17,12 @@ export default defineConfig({
         test: 'yellow',
       },
       screens: {
-        xs: '320px',
-        sm: '576px',
-        md: '768px',
-        lg: '992px',
-        xl: '1200px',
-        '2xl': '1600px',
+        xs: `${screenEnum.XS}px`,
+        sm: `${screenEnum.SM}px`,
+        md: `${screenEnum.MD}px`,
+        lg: `${screenEnum.LG}px`,
+        xl: `${screenEnum.XL}px`,
+        xxl: `${screenEnum.XXL}px`,
       },
     },
   },
