@@ -1,3 +1,4 @@
+import test from './test';
 export default [
   {
     path: '/index', // 首页
@@ -5,4 +6,5 @@ export default [
     meta: { title: 'index' },
     component: () => import('@/views/Home/index.vue'),
   },
+  ...test,
 ];
