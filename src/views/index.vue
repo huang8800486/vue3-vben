@@ -11,5 +11,14 @@
   </div>
 </template>
 <script setup lang="ts">
-  // import { HeaderTop } from '/@/components/Application';
+  import { defHttp } from '/@/https';
+  console.log('defHttp', defHttp.getAxios());
+  defHttp.axiosInstance
+    .post('https://blwm365.com/api/getPoolInfo')
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 </script>
